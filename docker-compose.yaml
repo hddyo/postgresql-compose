@@ -10,11 +10,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER_NAME}
       - POSTGRES_PASSWORD=${POSTGRES_USER_PASS}
     volumes:
-      - postgres-vol:/var/lib/postgresql/data"
+      - postgres-volumes:/var/lib/postgresql/data"
 
 volumes:
-  postgres-vol:
-    driver_opts:
-      type: none
-      device: /data/postgresql
-      o: bind
+  postgres-volumes:
